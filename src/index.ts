@@ -107,7 +107,7 @@ app.post('/', (request: Request<{}, {}, Vehicle[]>, response) => {
 	}
 	
 	results.sort((a, b) => a.total_price_in_cents - b.total_price_in_cents);
-	response.send(results.length);
+	response.send(results);
 });
 
 export default app
